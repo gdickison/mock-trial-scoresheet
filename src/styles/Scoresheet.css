@@ -1,0 +1,53 @@
+.score-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 26);
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.score-sheet-section {
+    background-color: lightgray;
+    border: solid 1px;
+    margin: 3px;
+}
+
+.score-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    border: solid;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 26);
+    border-radius: 5px;
+    margin: 1rem;
+    background-color: LightBlue;
+}
+
+.score-open-close {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.section-header {
+    background-color: LightGreen;
+}
+
+.score-sheet {
+    display: grid;
+    grid-template-columns: 4fr 1fr 4fr 1fr;
+}
+
+.input {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.p-label, .p-input, .d-label, .d-input {
+    padding: 5px 0 5px 0;
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #5a5a5a;
+    margin: 0 5px;
+}
+
+label {
+    font-size: 1.1rem;
+    margin-left: 10px;
+}
