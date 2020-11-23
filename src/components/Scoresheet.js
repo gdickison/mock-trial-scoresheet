@@ -1,6 +1,6 @@
 import React from 'react';
 import Score from './Score';
-import {ScoreSectionHeader, ScoreOpenClose, ScoreSection} from './Score';
+import {ScoreSectionHeader, ScoreOpenClose, ScoreSection, Comments} from './Score';
 import '../styles/Scoresheet.css';
 
 const Scoresheet = (props) => {
@@ -13,6 +13,7 @@ const Scoresheet = (props) => {
                         <Score party="p" id="open" label="Plaintiff Opening"/>
                         <Score party="d" id="open" label="Defense Opening"/>
                     </ScoreOpenClose>
+                    <Comments />
                 </div>
                 <div>
                     <h2 style={{backgroundColor: "LightBlue"}}>Plaintiff Case</h2>

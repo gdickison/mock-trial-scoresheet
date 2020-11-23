@@ -55,4 +55,19 @@ const Score = ({party, id, label}) => {
     )
 }
 
+export const Comments = () => {
+    return (
+        <div className="comments">
+            <div>
+                <label for="1234">Comments here</label>
+                <input type="text" id="1234" rows="5" cols="25"></input>
+            </div>
+            <div>
+                <label for="4567">Comments here</label>
+                <input type="text" id="4567" rows="5" cols="25"></input>
+            </div>
+        </div>
+    )
+}
+
 export default Score;
