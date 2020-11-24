@@ -8,7 +8,7 @@ const FormTitleText = (props) => {
             <p className="title-text">Score the little darlings</p>
             <br/>
 
-            <style jsx>
+            <style>
                 {
                     `.title-text {
                         font-size: 20px;

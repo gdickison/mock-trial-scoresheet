@@ -25,20 +25,19 @@ export const ScoreSection = (props) => {
 }
 
 const Score = ({party, id, label}) => {
-    const [score, setScore] = useState(null);
+    const [score, setScore] = useState('');
 
     const handleChange = e => {
         e.preventDefault();
         setScore(e.target.value);
     }
 
-    console.log(score);
     return (
         <Fragment>
             <div className={"input " + party + "-input"}>
-                <label for={party + "-" + id} className={party + "-label"}>{label}</label>
+                <label htmlFor={party + "-" + id} className={party + "-label"}>{label}</label>
                 <select value={score} onChange={handleChange} id={party + "-" + id}>
-                    <option value="null"></option>
+                    <option value=""></option>
                     <option value="10">10</option>
                     <option value="9">9</option>
                     <option value="8">8</option>
@@ -59,11 +58,11 @@ export const Comments = () => {
     return (
         <div className="comments">
             <div>
-                <label for="1234">Comments here</label>
+                <label htmlFor="1234">Comments here</label>
                 <input type="text" id="1234" rows="5" cols="25"></input>
             </div>
             <div>
-                <label for="4567">Comments here</label>
+                <label htmlFor="4567">Comments here</label>
                 <input type="text" id="4567" rows="5" cols="25"></input>
             </div>
         </div>

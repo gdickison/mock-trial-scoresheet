@@ -1,7 +1,6 @@
 import React from 'react';
 import FormTitleText from './FormTitleText';
 import FormTitleHeadline from './FormTitleHeadline';
-import NavButton from './NavButton';
 
 const FormTitlePage = () => {
   const year = new Date().getFullYear();
@@ -10,9 +9,9 @@ const FormTitlePage = () => {
   return (
     <div className="form-title-page">
         <FormTitleHeadline year={competitionYear} />
-        <FormTitleText year={competitionYear} />
+        <FormTitleText />
         
-        <style jsx>
+        <style>
         {
           `.form-title-page {
             text-align: center;

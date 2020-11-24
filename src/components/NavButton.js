@@ -3,7 +3,7 @@ import React from 'react';
 const NavButton = (props) => (
     <div>
         <button className="button-next">
-            <a>{props.children}</a>
+            {props.children}
         </button>
         <style jsx>
         {
