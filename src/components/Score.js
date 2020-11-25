@@ -32,38 +32,29 @@ const Score = ({party, id, label}) => {
         setScore(e.target.value);
     }
 
+    const scores = ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const scoreOptions = scores.map(score => {
+        return <option key={score} value={score}>{score}</option>
+    });
+
     return (
         <Fragment>
             <div className={"input " + party + "-input"}>
                 <label htmlFor={party + "-" + id} className={party + "-label"}>{label}</label>
-                <select value={score} onChange={handleChange} id={party + "-" + id}>
-                    <option value=""></option>
-                    <option value="10">10</option>
-                    <option value="9">9</option>
-                    <option value="8">8</option>
-                    <option value="7">7</option>
-                    <option value="6">6</option>
-                    <option value="5">5</option>
-                    <option value="4">4</option>
-                    <option value="3">3</option>
-                    <option value="2">2</option>
-                    <option value="1">1</option>
+                <select className="select" value={score} onChange={handleChange} id={party + "-" + id}>
+                    {scoreOptions}
                 </select>
             </div>
         </Fragment>
     )
 }
 
-export const Comments = () => {
+export const Comments = ({label}) => {
     return (
         <div className="comments">
             <div>
-                <label htmlFor="1234">Comments here</label>
-                <input type="text" id="1234" rows="5" cols="25"></input>
-            </div>
-            <div>
-                <label htmlFor="4567">Comments here</label>
-                <input type="text" id="4567" rows="5" cols="25"></input>
+                <label className="comment-label" htmlFor="1234">{label}</label>
+                <textarea className="text-area" id="1234"></textarea>
             </div>
         </div>
     )

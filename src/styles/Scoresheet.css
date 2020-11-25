@@ -2,6 +2,8 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 26);
     border-radius: 5px;
     margin: 1rem 0;
+    max-width: 1000px;
+    margin:0 auto;
 }
 
 .score-sheet-section {
@@ -13,6 +15,7 @@
 .score-container {
     display: grid;
     grid-template-columns: auto auto;
+    /* grid-template-rows: 2; */
     border: solid;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 26);
     border-radius: 5px;
@@ -50,9 +53,35 @@
 label {
     font-size: 1.1rem;
     margin-left: 10px;
+    pointer-events: none;
 }
 
-.comments {
-    display: grid;
-    grid-template-columns: auto auto;
+@media only screen and (max-width: 440px) {
+    .text-area {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 441px) {
+    .text-area {
+        width: 90%;
+    }
+}
+
+.text-area {
+    float: left;
+    min-height: 50px;
+    outline: none;
+    resize: none;
+    border: 1px solid grey;
+    margin: 0 0 10px 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+.comment-label {
+    display: block;
+}
+
+.select:hover {
+    border: solid 2px blue;
 }

@@ -12,8 +12,9 @@ const Scoresheet = (props) => {
                     <ScoreOpenClose>
                         <Score party="p" id="open" label="Plaintiff Opening"/>
                         <Score party="d" id="open" label="Defense Opening"/>
+                    <Comments label="Plaintiff Opening Comments" />
+                    <Comments label="Defense Opening Comments" />
                     </ScoreOpenClose>
-                    <Comments />
                 </div>
                 <div>
                     <h2 style={{backgroundColor: "LightBlue"}}>Plaintiff Case</h2>
