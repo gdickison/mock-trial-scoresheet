@@ -25,6 +25,8 @@ const Rubric = () => {
                           text-align: center;
                           background-color: white;
                           margin: 0 4px;
+                          box-shadow: 0 3px 10px;
+                          position: -webkit-sticky; /* Safari */
                           position: sticky;
                           top: 0
                       }`
