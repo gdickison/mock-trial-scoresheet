@@ -5,15 +5,14 @@ const FormTitleText = (props) => {
     return (
         <div>
             <br/>
-            <p className="title-text">Score the little darlings</p>
+            <p className="title-text">On a scale of 1-10 rate each team's performance in each of the 11 scoring categories.</p>
             <br/>
 
             <style>
                 {
                     `.title-text {
-                        font-size: 20px;
-                        margin: 0 20%;
-                        text-align: left;
+                        margin: 0 5%;
+                        text-align: center;
                       }`
                 }
             </style>

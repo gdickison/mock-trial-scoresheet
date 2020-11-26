@@ -10,7 +10,7 @@ const FormTitlePage = () => {
     <div className="form-title-page">
         <FormTitleHeadline year={competitionYear} />
         <FormTitleText />
-        
+
         <style>
         {
           `.form-title-page {
