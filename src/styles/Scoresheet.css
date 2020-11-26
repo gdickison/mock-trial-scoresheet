@@ -14,7 +14,7 @@
 
 .score-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     border: solid;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 26);
     border-radius: 5px;
@@ -41,7 +41,7 @@
     grid-template-columns: 3fr 1fr;
 }
 
-.p-label, .p-input, .d-label, .d-input {
+.p-label, .p-input, .d-label, .d-input, .info-input {
     padding: 5px 5px 5px 0;
     font-size: 1.1rem;
     font-weight: normal;

@@ -27,7 +27,7 @@ export const ScoreSection = (props) => {
 const Score = ({party, id, label}) => {
     const [score, setScore] = useState('');
 
-    const handleChange = e => {
+    const handleScore = e => {
         e.preventDefault();
         setScore(e.target.value);
     }
@@ -41,7 +41,7 @@ const Score = ({party, id, label}) => {
         <Fragment>
             <div className={"input " + party + "-input"}>
                 <label htmlFor={party + "-" + id} className={party + "-label"}>{label}</label>
-                <select className="select" value={score} onChange={handleChange} id={party + "-" + id}>
+                <select className="select" value={score} onChange={handleScore} id={party + "-" + id}>
                     {scoreOptions}
                 </select>
             </div>
@@ -52,7 +52,7 @@ const Score = ({party, id, label}) => {
 export const Comments = ({party, id, label}) => {
     const [comment, setComment] = useState('');
 
-    const handleChange = e => {
+    const handleComment = e => {
         e.preventDefault();
         setComment(e.target.value);
     }
@@ -60,7 +60,7 @@ export const Comments = ({party, id, label}) => {
     return (
         <div className={"comments " + party + "-input"}>
             <label className="comment-label" htmlFor={party + "-" + id + "-comment"}>{label}</label>
-            <textarea className="text-area" value={comment} onChange={handleChange} id={party + "-" + id + "-comment"}></textarea>
+            <textarea className="text-area" value={comment} onChange={handleComment} id={party + "-" + id + "-comment"}></textarea>
         </div>
     )
 }

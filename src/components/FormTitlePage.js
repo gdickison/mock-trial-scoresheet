@@ -1,6 +1,7 @@
 import React from 'react';
-import FormTitleText from './FormTitleText';
 import FormTitleHeadline from './FormTitleHeadline';
+import TrialInfo from './TrialInfo';
+import FormTitleText from './FormTitleText';
 
 const FormTitlePage = () => {
   const year = new Date().getFullYear();
@@ -9,15 +10,8 @@ const FormTitlePage = () => {
   return (
     <div className="form-title-page">
         <FormTitleHeadline year={competitionYear} />
+        <TrialInfo />
         <FormTitleText />
-
-        <style>
-        {
-          `.form-title-page {
-            text-align: center;
-          }`
-        }
-      </style>
     </div>
   )
 };

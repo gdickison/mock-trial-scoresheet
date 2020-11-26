@@ -4,7 +4,7 @@ const FormTitleText = (props) => {
 
     return (
         <div>
-            <br/>
+            <h3>Scoresheet</h3>
             <p className="title-text">On a scale of 1-10 rate each team's performance in each of the 11 scoring categories.</p>
             <br/>
 
