@@ -15,7 +15,6 @@
 .score-container {
     display: grid;
     grid-template-columns: auto auto;
-    /* grid-template-rows: 2; */
     border: solid;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 26);
     border-radius: 5px;
@@ -43,28 +42,34 @@
 }
 
 .p-label, .p-input, .d-label, .d-input {
-    padding: 5px 0 5px 0;
+    padding: 5px 5px 5px 0;
     font-size: 1.1rem;
     font-weight: normal;
     color: #5a5a5a;
-    margin: 0 5px;
+    margin-left: 5px;
 }
 
-label {
-    font-size: 1.1rem;
-    margin-left: 10px;
+.p-input {
+    border-right: solid;
+}
+
+.p-label, .d-label {
     pointer-events: none;
 }
 
 @media only screen and (max-width: 440px) {
     .text-area {
-        width: 85%;
+        width: 90%;
     }
 }
 
 @media only screen and (min-width: 441px) {
     .text-area {
-        width: 90%;
+        width: 96%;
+    }
+
+    .select {
+        margin-right: 5px;
     }
 }
 
@@ -74,14 +79,16 @@ label {
     outline: none;
     resize: none;
     border: 1px solid grey;
-    margin: 0 0 10px 10px;
     font-family: "Roboto", sans-serif;
+    margin-left: 5px;
 }
 
 .comment-label {
     display: block;
+    pointer-events: none;
+    margin-left: 5px;
 }
 
-.select:hover {
+.select:hover, .text-area:hover {
     border: solid 2px blue;
 }

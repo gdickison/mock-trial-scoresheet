@@ -32,7 +32,7 @@ const Score = ({party, id, label}) => {
         setScore(e.target.value);
     }
 
-    const scores = ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const scores = ['', 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
     const scoreOptions = scores.map(score => {
         return <option key={score} value={score}>{score}</option>
     });
@@ -49,13 +49,18 @@ const Score = ({party, id, label}) => {
     )
 }
 
-export const Comments = ({label}) => {
+export const Comments = ({party, id, label}) => {
+    const [comment, setComment] = useState('');
+
+    const handleChange = e => {
+        e.preventDefault();
+        setComment(e.target.value);
+    }
+
     return (
-        <div className="comments">
-            <div>
-                <label className="comment-label" htmlFor="1234">{label}</label>
-                <textarea className="text-area" id="1234"></textarea>
-            </div>
+        <div className={"comments " + party + "-input"}>
+            <label className="comment-label" htmlFor={party + "-" + id + "-comment"}>{label}</label>
+            <textarea className="text-area" value={comment} onChange={handleChange} id={party + "-" + id + "-comment"}></textarea>
         </div>
     )
 }

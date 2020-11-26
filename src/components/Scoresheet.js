@@ -12,8 +12,8 @@ const Scoresheet = (props) => {
                     <ScoreOpenClose>
                         <Score party="p" id="open" label="Plaintiff Opening"/>
                         <Score party="d" id="open" label="Defense Opening"/>
-                    <Comments label="Plaintiff Opening Comments" />
-                    <Comments label="Defense Opening Comments" />
+                        <Comments party="p" id="open" label="Plaintiff Opening Comments" />
+                        <Comments party="d" id="open" label="Defense Opening Comments" />
                     </ScoreOpenClose>
                 </div>
                 <div>
@@ -25,6 +25,10 @@ const Scoresheet = (props) => {
                         <Score party="p" id="p-w-1-direct" label="Direct Examination" />
                         <Score party="d" id="p-w-1-cross" label="Cross Examination" />
                         <Score party="p" id="p-w-1-performance" label="Witness Performance" />
+                        <div></div>
+                        <Comments party="p" id="p-w-1-direct" label="Direct Examination Comments" />
+                        <Comments party="d" id="p-w-1-cross" label="Cross Examination Comments" />
+                        <Comments party="p" id="p-w-1-performance" label="Witness Performance Comments" />
                     </ScoreSection>
                 </div>
                 <div className="score-sheet-section">
@@ -33,6 +37,10 @@ const Scoresheet = (props) => {
                         <Score party="p" id="p-w-2-direct" label="Direct Examination" />
                         <Score party="d" id="p-w-2-cross" label="Cross Examination" />
                         <Score party="p" id="p-w-2-performance" label="Witness Performance" />
+                        <div></div>
+                        <Comments party="p" id="p-w-2-direct" label="Direct Examination Comments" />
+                        <Comments party="d" id="p-w-2-cross" label="Cross Examination Comments" />
+                        <Comments party="p" id="p-w-2-performance" label="Witness Performance Comments" />
                     </ScoreSection>
                 </div>
                 <div className="score-sheet-section">
@@ -41,6 +49,10 @@ const Scoresheet = (props) => {
                         <Score party="p" id="p-w-3-direct" label="Direct Examination" />
                         <Score party="d" id="p-w-3-cross" label="Cross Examination" />
                         <Score party="p" id="p-w-3-performance" label="Witness Performance" />
+                        <div></div>
+                        <Comments party="p" id="p-w-3-direct" label="Direct Examination Comments" />
+                        <Comments party="d" id="p-w-3-cross" label="Cross Examination Comments" />
+                        <Comments party="p" id="p-w-3-performance" label="Witness Performance Comments" />
                     </ScoreSection>
                 </div>
                 <div>
@@ -51,26 +63,38 @@ const Scoresheet = (props) => {
                     <ScoreSection>
                         <Score party="p" id="d-w-1-cross" label="Cross Examination" />
                         <Score party="d" id="d-w-1-direct" label="Direct Examination" />
-                        <div></div>
+                        {<div className="p-input"></div>}
                         <Score party="d" id="d-w-1-performance" label="Witness Performance" />
+                        <Comments party="p" id="d-w-1-cross" label="Cross Examination Comments" />
+                        <Comments party="d" id="d-w-1-direct" label="Direct Examination Comments" />
+                        {<div className="p-input"></div>}
+                        <Comments party="d" id="d-w-1-performance" label="Witness Performance Comments" />
                     </ScoreSection>
                 </div>
                 <div className="score-sheet-section">
                     <ScoreSectionHeader sectionHeaderText="Defense Second Witness" />
                     <ScoreSection>
-                        <Score party="p" id="d-w-2-cross" label="Cross Examination" />
+                    <Score party="p" id="d-w-2-cross" label="Cross Examination" />
                         <Score party="d" id="d-w-2-direct" label="Direct Examination" />
-                        <div></div>
+                        {<div className="p-input"></div>}
                         <Score party="d" id="d-w-2-performance" label="Witness Performance" />
+                        <Comments party="p" id="d-w-2-cross" label="Cross Examination Comments" />
+                        <Comments party="d" id="d-w-2-direct" label="Direct Examination Comments" />
+                        {<div className="p-input"></div>}
+                        <Comments party="d" id="d-w-2-performance" label="Witness Performance Comments" />
                     </ScoreSection>
                 </div>
                 <div className="score-sheet-section">
                     <ScoreSectionHeader sectionHeaderText="Defense Third Witness" />
                     <ScoreSection>
-                        <Score party="p" id="d-w-3-cross" label="Cross Examination" />
+                    <Score party="p" id="d-w-3-cross" label="Cross Examination" />
                         <Score party="d" id="d-w-3-direct" label="Direct Examination" />
-                        <div></div>
+                        {<div className="p-input"></div>}
                         <Score party="d" id="d-w-3-performance" label="Witness Performance" />
+                        <Comments party="p" id="d-w-3-cross" label="Cross Examination Comments" />
+                        <Comments party="d" id="d-w-3-direct" label="Direct Examination Comments" />
+                        {<div className="p-input"></div>}
+                        <Comments party="d" id="d-w-3-performance" label="Witness Performance Comments" />
                     </ScoreSection>
                 </div>
                 <div className="score-sheet-section">
@@ -78,6 +102,8 @@ const Scoresheet = (props) => {
                     <ScoreOpenClose>
                         <Score party="p" id="close" label="Plaintiff Closing"/>
                         <Score party="d" id="close" label="Defense Closing"/>
+                        <Comments party="p" id="close" label="Plaintiff Closing Comments" />
+                        <Comments party="d" id="close" label="Defense Closing Comments" />
                     </ScoreOpenClose>
                 </div>
                 <div className="score-sheet-section">
@@ -85,6 +111,8 @@ const Scoresheet = (props) => {
                     <ScoreOpenClose>
                         <Score party="p" id="deductions" label="Plaintiff Deductions"/>
                         <Score party="d" id="deductions" label="Defense Deductions"/>
+                        <Comments party="p" id="deductions" label="Explanation" />
+                        <Comments party="d" id="deductions" label="Explanation" />
                     </ScoreOpenClose>
                 </div>
                 <div>
