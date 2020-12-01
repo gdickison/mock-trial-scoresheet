@@ -5,7 +5,7 @@ import '../styles/Scoresheet.css';
 
 const Scoresheet = (props) => {
     return (
-        <div>
+        <div className="big-container">
             <div className="score-card">
                 <div className="score-sheet-section">
                     <ScoreSectionHeader sectionHeaderText="Opening Statements" />
@@ -115,9 +115,12 @@ const Scoresheet = (props) => {
                         <Comments party="d" id="deductions" label="Explanation" />
                     </ScoreOpenClose>
                 </div>
-                <div>
+                <div className="totals">
                     <h2>Totals</h2>
                 </div>
+            </div>
+            <div className="score-board">
+                Scoreboard here
             </div>
         </div>
     );

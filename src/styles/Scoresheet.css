@@ -1,3 +1,22 @@
+@media only screen and (min-width: 774px) {
+    .big-container {
+        display: grid;
+        grid-template-columns: 75% 25%;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    .totals {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        bottom: 0;
+    }
+
+    .score-board {
+        display: none;
+    }
+}
+
 .score-card {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 26);
     border-radius: 5px;
@@ -91,4 +110,20 @@
 
 .select:hover, .text-area:hover {
     border: solid 2px blue;
+}
+
+.totals {
+    background-color: white;
+}
+
+.score-board {
+    background-color: lightgreen;
+    max-height: 500px;
+    margin-top: 20px;
+    margin-right: 5px;
+    border: solid gray 1px;
+    border-radius: 2px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 50px;
 }
