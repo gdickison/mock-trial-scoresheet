@@ -23,12 +23,15 @@
     margin: 1rem 0;
     max-width: 1000px;
     margin:0 auto;
+    scroll-snap-type: y mandatory;
 }
 
 .score-sheet-section {
+    height: 100vh;
     background-color: lightgray;
     border: solid 1px;
     margin: 3px;
+    scroll-snap-align: start;
 }
 
 .score-container {
