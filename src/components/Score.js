@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 
 export const ScoreSectionHeader = ({sectionHeaderText}) => {
     return (
@@ -24,12 +24,11 @@ export const ScoreSection = (props) => {
     )
 }
 
-const Score = ({party, id, label}) => {
-    const [score, setScore] = useState('');
+const Score = ({party, id, label, score, storeScore}) => {
 
     const handleScore = e => {
         e.preventDefault();
-        setScore(e.target.value);
+        storeScore(e.target.value);
     }
 
     const scores = ['', 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
@@ -49,12 +48,11 @@ const Score = ({party, id, label}) => {
     )
 }
 
-export const Comments = ({party, id, label}) => {
-    const [comment, setComment] = useState('');
+export const Comments = ({party, id, label, comment, storeComment}) => {
 
     const handleComment = e => {
         e.preventDefault();
-        setComment(e.target.value);
+        storeComment(e.target.value);
     }
 
     return (
@@ -62,6 +60,40 @@ export const Comments = ({party, id, label}) => {
             <label className="comment-label" htmlFor={party + "-" + id + "-comment"}>{label}</label>
             <textarea className="text-area" value={comment} onChange={handleComment} id={party + "-" + id + "-comment"}></textarea>
         </div>
+    )
+}
+
+export const ScoreBoardItem = (props) => {
+    console.log(props);
+
+    return (
+        <Fragment>
+            <div className="scoreboard-item">
+                <span>Plaintiff's Opening: </span>
+                <span>....</span>
+                <span>{props.pOpenScore}</span>
+            </div>
+            <div className="scoreboard-item">
+                <span>Defendant's Opening: </span>
+                <span>....</span>
+                <span>{props.dOpenScore}</span>
+            </div>
+            <div className="scoreboard-item">
+                <span>P's First Direct: </span>
+                <span>....</span>
+                <span>{props.pW1Direct}</span>
+            </div>
+            <div className="scoreboard-item">
+                <span>D's First Cross: </span>
+                <span>....</span>
+                <span>{props.pW1Cross}</span>
+            </div>
+            <div className="scoreboard-item">
+                <span>P Performance: </span>
+                <span>....</span>
+                <span>{props.pW1Performance}</span>
+            </div>
+        </Fragment>
     )
 }
 
