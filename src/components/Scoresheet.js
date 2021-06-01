@@ -5,7 +5,7 @@ import '../styles/Scoresheet.css';
 
 const Scoresheet = (props) => {
     // TODO: create a score/setScore for each score input.
-    // E.g., const [pOpenScore, setPOpenScore] = useState('');
+    // E.g., const [pOpenScore, setPOpenScore] = useState('')
     const [pOpen, setPOpen] = useState('');
     const [pOpenComment, setPOpenComment] = useState('');
     const [dOpen, setDOpen] = useState('');

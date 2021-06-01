@@ -70,27 +70,22 @@ export const ScoreBoardItem = (props) => {
         <Fragment>
             <div className="scoreboard-item">
                 <span>Plaintiff's Opening: </span>
-                <span>....</span>
-                <span>{props.pOpenScore}</span>
+                <span>{props.pOpen}</span>
             </div>
             <div className="scoreboard-item">
                 <span>Defendant's Opening: </span>
-                <span>....</span>
-                <span>{props.dOpenScore}</span>
+                <span>{props.dOpen}</span>
             </div>
             <div className="scoreboard-item">
                 <span>P's First Direct: </span>
-                <span>....</span>
                 <span>{props.pW1Direct}</span>
             </div>
             <div className="scoreboard-item">
                 <span>D's First Cross: </span>
-                <span>....</span>
                 <span>{props.pW1Cross}</span>
             </div>
             <div className="scoreboard-item">
                 <span>P Performance: </span>
-                <span>....</span>
                 <span>{props.pW1Performance}</span>
             </div>
         </Fragment>
