@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Score from './Score';
 import {ScoreSectionHeader, ScoreOpenClose, ScoreSection, Comments, ScoreBoardItem} from './Score';
 import '../styles/Scoresheet.css';
@@ -6,17 +6,23 @@ import '../styles/Scoresheet.css';
 const Scoresheet = (props) => {
     // TODO: create a score/setScore for each score input.
     // E.g., const [pOpenScore, setPOpenScore] = useState('')
-    const [pOpen, setPOpen] = useState('');
+    const [pOpen, setPOpen] = useState(0);
     const [pOpenComment, setPOpenComment] = useState('');
-    const [dOpen, setDOpen] = useState('');
+    const [dOpen, setDOpen] = useState(0);
     const [dOpenComment, setDOpenComment] = useState('');
 
-    const [pW1Direct, setPW1Direct] = useState('');
-    const [pW1Cross, setPW1Cross] = useState('');
-    const [pW1Performance, setPW1Performance] = useState('');
+    const [pW1Direct, setPW1Direct] = useState(0);
+    const [pW1Cross, setPW1Cross] = useState(0);
+    const [pW1Performance, setPW1Performance] = useState(0);
     const [pW1DirectComment, setPW1DirectComment] = useState('');
     const [pW1CrossComment, setPW1CrossComment] = useState('');
     const [pW1PerformanceComment, setPW1PerformanceComment] = useState('');
+
+    const [pTotal, setPTotal] = useState(0);
+
+    useEffect(() => {
+        setPTotal(parseInt(pOpen) + parseInt(pW1Direct));
+    }, [pOpen, pW1Direct]);
 
     return (
         <div className="big-container">
@@ -45,7 +51,7 @@ const Scoresheet = (props) => {
                         <Comments comment={pW1PerformanceComment} storeComment={setPW1PerformanceComment} party="p" id="w-1-performance" label="Witness Performance Comments" />
                     </ScoreSection>
                 </div>
-                <div className="score-sheet-section">
+                {/* <div className="score-sheet-section">
                     <ScoreSectionHeader sectionHeaderText="Plaintiff Second Witness" />
                     <ScoreSection>
                         <Score party="p" id="w-2-direct" label="Direct Examination" />
@@ -128,9 +134,10 @@ const Scoresheet = (props) => {
                         <Comments party="p" id="deductions" label="Explanation" />
                         <Comments party="d" id="deductions" label="Explanation" />
                     </ScoreOpenClose>
-                </div>
+                </div> */}
                 <div className="totals">
                     <h2>Totals</h2>
+                    <span>P Total: {pTotal}</span>
                 </div>
             </div>
             <div className="score-board">
@@ -140,6 +147,7 @@ const Scoresheet = (props) => {
                     pW1Direct={pW1Direct}
                     pW1Cross={pW1Cross}
                     pW1Performance={pW1Performance}
+                    pTotal={pTotal}
                 />
             </div>
         </div>

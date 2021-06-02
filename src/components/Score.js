@@ -88,6 +88,10 @@ export const ScoreBoardItem = (props) => {
                 <span>P Performance: </span>
                 <span>{props.pW1Performance}</span>
             </div>
+            <div className="scoreboard-item">
+                <span>P Total: </span>
+                <span>{props.pTotal}</span>
+            </div>
         </Fragment>
     )
 }
